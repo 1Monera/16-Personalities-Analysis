@@ -45,5 +45,26 @@ M$Code=ifelse(M$Code=="ESFJ","Consul",M$Code)
 # Multiplying independent probabilities
 M$Probability=M$Mind*M$Energy*M$Nature*M$Tactics
 
+### Displaying Results
 data=M[order(M$Probability,decreasing=1),]
 data[,9:10] %>% kable(col.names=c("Personality","Probability"))
+
+### Ordered probability distribution for personalities
+|   |Personality  | Probability|
+|:--|:------------|-----------:|
+|9  |Architect    |   0.1930896|
+|13 |Logistician  |   0.1712304|
+|10 |Logician     |   0.1287264|
+|14 |Virtuoso     |   0.1141536|
+|11 |Advocate     |   0.0867504|
+|15 |Defender     |   0.0769296|
+|12 |Mediator     |   0.0578336|
+|16 |Aventurer    |   0.0512864|
+|1  |Commander    |   0.0263304|
+|5  |Executive    |   0.0233496|
+|2  |Debater      |   0.0175536|
+|6  |Entrepreneur |   0.0155664|
+|3  |Protagonist  |   0.0118296|
+|7  |Consul       |   0.0104904|
+|4  |Campaigner   |   0.0078864|
+|8  |Entertainer  |   0.0069936|
